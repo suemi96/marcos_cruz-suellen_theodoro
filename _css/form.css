@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+.cabecario h3{
+    font-size: 12px;
+    color: #606060;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+.cabecario h1{
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.cabecario h2{
+    font-size: 13pt;
+    color: #cecece;
+    background-color: white;
+	margin: 0px;
+}
+.direita{
+	text-align: right;
+}
+
+
+form{
+	width: 500px;
+	margin: auto;
+}
+input , textarea{
+	font-size: sans-serif;
+	font-weight: normal;
+	font-size: 13pt;
+	background-color: rgba(255,255,255,.8);
+}
+input:hover,textarea:hover{
+	background-color: #dddddd; 
+}
+legend{
+	font-weight: bold;
+	color: #888888;
+	font-size: 13pt;
+}
+fieldset{
+	border-color: #cecece;
+	margin: 20px;
+}
+fieldset#sexo{
+	width: 150px;
+}
+
+fieldset#usuario{
+	background: url("../_imagens/icone-contato.png") no-repeat 95% 95%;
+}
+fieldset#endereco{
+	background: url("../_imagens/icone-endereco.png") no-repeat 95% 95%;
+}
+fieldset#msg{
+	background: url("../_imagens/icone-mensagem.png") no-repeat 95% 95%;
+}
+fieldset#pedido{
+	background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+}
+img#enviar{
+	position: relative;
+	left: 580px;
+	
+}
