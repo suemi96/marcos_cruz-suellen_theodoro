@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0">
     <title>Tudo Sobre Google Glass</title>
     <link rel="stylesheet" href="_css/estilo.css" />
     <link rel="stylesheet" href="_css/form.css" />
@@ -27,20 +28,11 @@
             <nav id="menu">
                 <h1>Menu Principal</h1>
                 <ul type="disc">
-                    <li onmouseover="mudaFoto('home')" onmouseout="mudaFoto('contato')"><a href="index.html">Home</a>
-                    </li>
-
-                    <li onmouseover="mudaFoto('especificacoes')" onmouseout="mudaFoto('contato')"><a href="specs.html">
-                            Especificações</a></li>
-
-                    <li onmouseover="mudaFoto('fotos')" onmouseout="mudaFoto('contato')"><a href="fotos.html">Fotos</a>
-                    </li>
-
-                    <li onmouseover="mudaFoto('multimidia')" onmouseout="mudaFoto('contato')"><a
-                            href="#">Multimídia</a></li>
-
-                    <li onmouseover="mudaFoto('contato')" onmouseout="mudaFoto('contato')"><a
-                            href="fale-conosco.html">Fale conosco</a></li>
+                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="index.html">Home</a></li>
+                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="#">Multimídia</a></li>
+                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/glass-oculos-preto-peq.png')"><a href="fale-conosco.html"> Fale conosco</a></li>
                 </ul>
             </nav>
         </header>
@@ -48,44 +40,43 @@
             <header class="cabecario">
                 <h3>Fale Conosco > Contato</h3>
                 <h1>Formulário de Contato</h1>
-                <h2> Marcos Cruz e Suellen Theodoro</h2>
-                <h3 class="direita">Atualizado em Abril/2020</h3>
+                <h2>por Marcos Cruz e Suellen Theodoro</h2>
+                <h3 class="direita" style="color:#606060;">Atualizado em Abril/2020</h3>
             </header>
         </article>
-        <!--tag form para criar formulario-->
-        <!-- fieldset para conjunto de campos-->
-        <!-- tag label serve pra identificar o obj relativo a ele é ideal por questões semanticas-->
-        <!-- metodo get e metodo post, metodo get mais rapido porem menos seguro-->
+
         <form method="POST" id="fContato" oninput="cal_total();">
 
             <fieldset id="usuario">
                 <legend>Identificação do Usuário</legend>
-                <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="20"
+                <p class="paragrafoForm"><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="25" maxlength="50"
                         placeholder=" Nome Sobrenome" /></p>
-                <p> <label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="6"
-                        maxlength="6" placeholder="Senha" /> </p>
-                <p><label for="cMail">E-mail:</label> <input type="E-mail" name="tMail" id="cMail" size="25"
-                        maxlength="40" placeholder="E-mail" /></p>
+                <p class="paragrafoForm"> <label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8"
+                        maxlength="8" placeholder="8 dígitos" /> </p>
+                        <p style="border-bottom: 1px solid #cecece"></p>
+                <p class="paragrafoForm"><label for="cMail">E-mail:</label> <input type="E-mail" name="tMail" id="cMail" size="25"
+                        maxlength="100" placeholder="Separe por vírgulas" /></p>
                 <fieldset id="sexo">
-                    <legend>Sexo:</legend>
+                    <legend>Sexo</legend>
                     <input type="radio" name="tSexo" id="cMasc"> <label for="cMasc">Masculino</label><br />
                     <input type="radio" name="tSexo" id="cFem"> <label for="cFem">Feminino</label>
                 </fieldset>
-                <p>Data de Nascimento:<input type="date" name="tNasc" id="cNasc"></p>
+                <p class="paragrafoForm">Data de Nascimento:<input type="date" name="tNasc" id="cNasc"></p>
             </fieldset>
 
             <fieldset id="endereco">
-                <legend>Endereço do Usuário</legend>
+                <legend>Endereço</legend>
 
-                <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="20"
+                <p class="paragrafoForm"><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="20"
                         maxlength="80" placeholder="Rua, Avenida, Travessa"></p>
 
-                <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="9999"
-                        placeholder="Número"></p>
+                <p class="paragrafoForm"><label for="cNum">Número:</label><input size="4" type="number" name="tNum" id="cNum" min="0" max="9999"
+                        ></p>
 
-                <p>
+                <p class="paragrafoForm">
                     <label for="cEstado">Estado:</label>
                     <select name="tEst" id="cEstado">
+                        <option></option>
                         <option>Rio de Janeiro</option>
                         <option>São Paulo</option>
 
@@ -93,8 +84,8 @@
                     </select>
                 </p>
 
-                <p><label for="cCidade">Cidade:<input type="text" name="tCidade" id="cCidade" maxlength="40"
-                            placeholder="cidade" list="cidades">
+                <p class="paragrafoForm"><label for="cCidade">Cidade:<input type="text" name="tCidade" id="cCidade" maxlength="40"
+                            placeholder="Sua cidade" list="cidades">
                         <datalist id="cidades">
                             <option value="Rio de Janeiro"></option>
                             <option value="São Paulo"></option>
@@ -104,29 +95,29 @@
             </fieldset>
 
             <fieldset id="msg">
-                <legend>Mensagem do Usuário</legend>
-                <p>
+                <legend>Mensagem</legend>
+                <p class="paragrafoForm">
                     <label for="cUrg">Grau de Urgência:</label>
-                    Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Max
+                    Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx
                 </p>
-                <p><label for="cMsg">Mensagem: <textarea name="tMsg" id="cMsg" cols="45" rows="5"
-                            placeholder="Escreva sua Mensagem"></textarea></label></p>
+                <p class="paragrafoForm"><label for="cMsg">Mensagem: <textarea name="tMsg" id="cMsg" cols="45" rows="5"
+                            placeholder="Sua mensagem..."></textarea></label></p>
             </fieldset>
 
             <fieldset id="pedido">
                 <legend>Quero um Google Glass</legend>
-                <p><input type="checkbox" name="tPed" id="cPed">
+                <p class="paragrafoForm"><input type="checkbox" name="tPed" id="cPed" checked>
                     <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label>
                 </p>
-                <p><label for="cCor">Cor:</label>
+                <p class="paragrafoForm"><label for="cCor">Cor:</label>
                     <input type="color" name="tCor" id="cCor" value="#0000FF">
                 </p>
-                <p>
+                <pclass="paragrafoForm">
                     <label for="cQuant">Quantidade: <input type="number" name="tQuant" id="cQuant" min="0" max="5"
                             value="0"></label>
 
                 </p>
-                <p><label for="cPrice">Preço Total: R$</label><input type="text" name="tPrice" id="cPrice" readonly="">
+                <p class="paragrafoForm"><label for="cPrice">Preço Total: R$</label><input type="text" name="tPrice" id="cPrice" readonly="" placeholder="Total a Pagar">
                 </p>
             </fieldset>
         </form>
@@ -134,9 +125,9 @@
         <img id="enviar" src="_imagens/botao-enviar.png" onclick="enviar()" />
 
         <footer id="rodape">
-            <p>Copyright 2020 &copy; - by Marcos Vinicius/Suellen Suemi<br />
-                <a href="http://Facebook.com/cursosemvideo" target="_blank"> Facebook</a> |
-                <a href="http://Twitter.com/cursosemvideo" target="_blank"> Twitter</a> </p>
+            <p>&copy; Copyright 2020 - by Marcos Vinicius - Suellen Suemi <br/>
+                <a href="https://facebook.com/cursosemvideo" target="_blank"> Facebook  | </a>
+            <a href="https://twitter.com/cursosemvideo" target="_blank"> Twitter</a> </p>
         </footer>
     </div>
 </body>

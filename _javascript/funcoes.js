@@ -1,5 +1,6 @@
 function mudaFoto(foto) {
-	document.getElementById("icone").src = " _imagens/" + foto + ".png";
+	console.log(foto)
+	document.getElementById("icone").src = foto;
 }
 
 function cal_total() {
@@ -7,7 +8,6 @@ function cal_total() {
 	Total = qtd * 1500;
 	document.getElementById('cPrice').value = Total
 }
-// document.getElementById("enviar").addEventListener("click", checkForm);
 
 function enviar() {
 	let nome = document.getElementById("cNome").value;
